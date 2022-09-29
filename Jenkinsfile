@@ -10,7 +10,7 @@ pipeline{
 				stage('install apache'){
 				
 					steps{
-						
+							sh "rm -rf /var/www/html/index.html"
 							sh "yum install httpd -y"
 					
 					}
