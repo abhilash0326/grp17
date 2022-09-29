@@ -1,8 +1,8 @@
 pipeline{
 			agent {
 					label{ 
-						label 'built-in'
-						customWorkspace '/data/master'
+						label 'Slave-2'
+						customWorkspace '/data/22Q2'
 							}
 			}
 		stages{
@@ -23,7 +23,7 @@ pipeline{
 				stage ('Deployment of index.html'){
 					steps{
 					
-							sh "cp -r /data/master/index.html /var/www/html/"
+							sh "cp -r /data/22Q2/index.html /var/www/html/"
 							sh "chmod -R 777 /var/www/html/index.html"
 						}
 					}
